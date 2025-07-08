@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bellmin Portfolio</title>
+  <style>
+    /* Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #1C1E53; line-height: 1.5; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Variables */
+    :root {
+      --primary: #5E3BEE;
+      --dark-blue: #03045E;
+      --bg-shade: #F5FCFF;
+      --heading-color: #282938;
+      --body-color: #1C1E53;
+    }
+
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+
+    /* Header */
+    .header { background: var(--bg-shade); }
+    .header__nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem; }
+    .header__logo { font-family: 'Poppins', sans-serif; font-size: 2rem; color: var(--dark-blue); }
+    .nav__list { list-style: none; display: flex; gap: 1.5rem; }
+    .nav__item a { font-size: 1rem; color: var(--dark-blue); transition: color .3s; }
+    .nav__item a:hover { color: var(--primary); }
+    .nav__contact a { display: inline-block; padding: 0.75rem 1.5rem; border: 1px solid var(--dark-blue); border-radius: 0.25rem; transition: background .3s, color .3s; }
+    .nav__contact a:hover { background: var(--primary); color: #fff; }
+
+    /* Main */
+    .main { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding: 2rem 0; }
+    .main__text { flex: 1 1 300px; }
+    .main__name { font-family: 'Poppins', sans-serif; font-size: 3rem; color: var(--dark-blue); }
+    .main__title { font-family: 'Poppins', sans-serif; font-size: 4rem; color: var(--primary); margin-bottom: 1rem; }
+    .main__description { font-size: 1rem; color: var(--body-color); margin-bottom: 1rem; }
+    .main__button a { background: var(--primary); color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.25rem; transition: background .3s; }
+    .main__button a:hover { background: var(--dark-blue); }
+    .main__image { flex: 1 1 300px; }
+
+    /* Skills */
+    .skills { padding: 2rem 0; }
+    .skills__title { font-size: 2.5rem; font-family: 'Poppins', sans-serif; color: var(--dark-blue); margin-bottom: 1rem; }
+    .skills__list { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .skill { background: var(--bg-shade); padding: 1rem; border-radius: 0.5rem; flex: 1 1 200px; transition: transform .3s; }
+    .skill:hover { transform: translateY(-5px); border-bottom: 0.25rem solid var(--primary); }
+    .skill__icon { text-align: center; margin-bottom: 0.5rem; }
+    .skill__icon img { width: 3rem; height: 3rem; }
+    .skill__name { font-size: 1.25rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem; }
+    .skill__desc { font-size: 1rem; color: var(--body-color); text-align: center; }
+
+    /* About */
+    .about { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding: 2rem 0; }
+    .about__image { flex: 1 1 300px; }
+    .about__image img { border-radius: 0.5rem; }
+    .about__content { flex: 1 1 300px; }
+    .about__content h2 { font-size: 2rem; font-family: 'Poppins', sans-serif; color: var(--dark-blue); margin-bottom: 1rem; }
+    .about__content p { font-size: 1rem; color: var(--body-color); margin-bottom: 0.5rem; }
+
+    /* Portfolio */
+    .portfolio { padding: 2rem 0; }
+    .portfolio__title { font-size: 2.5rem; font-family: 'Poppins', sans-serif; color: var(--dark-blue); margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .portfolio__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .project { background: var(--bg-shade); border-radius: 0.5rem; overflow: hidden; transition: transform .3s; }
+    .project:hover { transform: translateY(-5px); border-bottom: 0.25rem solid var(--primary); }
+    .project__img img { width: 100%; height: auto; }
+    .project__info { padding: 1rem; }
+    .project__name { font-size: 1.25rem; font-weight: 600; color: var(--heading-color); margin-bottom: 0.5rem; }
+    .project__desc { font-size: 1rem; color: var(--body-color); margin-bottom: 0.5rem; }
+    .project__link a { font-size: 1rem; color: var(--primary); }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .main { flex-direction: column; text-align: center; }
+      .header__nav { flex-direction: column; gap: 1rem; }
+      .nav__list { flex-direction: column; align-items: center; }
+      .skills__list { flex-direction: column; }
+      .about { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header container">
+    <nav class="header__nav">
+      <div class="header__logo">🔔 Bellmin</div>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home">Home</a></li>
+        <li class="nav__item"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav__item"><a href="#about">About Me</a></li>
+        <li class="nav__item"><a href="#testimonials">Testimonials</a></li>
+      </ul>
+      <div class="nav__contact"><a href="#contact">Contact Me!</a></div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="main" id="home">
+      <div class="main__text">
+        <h1 class="main__name">김종민</h1>
+        <h2 class="main__title">Developer</h2>
+        <p class="main__description">안녕하세요. 알 때까지 파고드는 개발자 김종민입니다.</p>
+        <div class="main__button"><a href="https://velog.io/@rlajm1203" target="_blank" rel="noopener">Get In Touch!</a></div>
+      </div>
+      <div class="main__image"><img src="img/developer.jpg" alt="프로필 사진"></div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2 class="skills__title">My Skills</h2>
+      <div class="skills__list">
+        <div class="skill">
+          <div class="skill__icon"><img src="img/Spring.png" alt="Spring Boot 아이콘"></div>
+          <div class="skill__name">Spring Boot</div>
+          <div class="skill__desc">RESTful API, Spring Security, Spring Data JPA 경험</div>
+        </div>
+        <div class="skill">
+          <div class="skill__icon"><img src="img/Java.png" alt="Java 아이콘"></div>
+          <div class="skill__name">Java</div>
+          <div class="skill__desc">OOP, Stream API, Lambda, IO 처리</div>
+        </div>
+        <!-- 나머지 스킬도 동일 구조로 추가 -->
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__image"><img src="img/Me.png" alt="소개 이미지"></div>
+      <div class="about__content">
+        <h2>About Me</h2>
+        <p>공부하는 것을 좋아합니다.</p>
+        <p>모르는 것을 알아갈 때가 재미있습니다.</p>
+        <p>MBTI: ESTJ</p>
+        <p>취미: 운동</p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2 class="portfolio__title">My Portfolio</h2>
+      <div class="portfolio__list">
+        <div class="project">
+          <div class="project__img"><img src="img/eeos.png" alt="EEOS 프로젝트 이미지"></div>
+          <div class="project__info">
+            <div class="project__name">EEOS</div>
+            <div class="project__desc">동아리 출석체크 시스템</div>
+            <div class="project__link"><a href="https://www.eeos.econovation.kr" target="_blank" rel="noopener">Link!</a></div>
+          </div>
+        </div>
+         <div class="project">
+          <div class="project__img"><img src="img/econo-recruit.png" alt="econo-recruit 프로젝트 이미지"></div>
+          <div class="project__info">
+            <div class="project__name">Econo-Recruit</div>
+            <div class="project__desc">동아리 리크루트 플랫폼</div>
+            <div class="project__link"><a href="https://recruit.econovation.kr" target="_blank" rel="noopener">Link!</a></div>
+          </div>
+        </div>
+         <div class="project">
+          <div class="project__img"><img src="img/whozin.png" alt="Whozin 프로젝트 이미지"></div>
+          <div class="project__info">
+            <div class="project__name">WhozIn</div>
+            <div class="project__desc">동아리방 재실 현황 시스템</div>
+            <div class="project__link"><a href="https://www.whozin.econovation.kr" target="_blank" rel="noopener">Link!</a></div>
+          </div>
+        </div>
+         <div class="project">
+          <div class="project__img"><img src="img/abas.png" alt="ABAS 프로젝트 이미지"></div>
+          <div class="project__info">
+            <div class="project__name">ABAS</div>
+            <div class="project__desc">농업 빅데이터 분석 시스템</div>
+            <div class="project__link"><a href="https://www.abas.life" target="_blank" rel="noopener">Link!</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <!-- Footer 내용 추가 -->
+  </footer>
+</body>
+</html>

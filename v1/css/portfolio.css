@@ -1,11 +1,11 @@
-#my-portfolio{
+/* #my-portfolio{
     display: inline-block;
 }
 
 #my-portfolio-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 20dvw;
 }
 
 #my-portfolio-title {
@@ -34,13 +34,10 @@
     font-size: 3dvw;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 32px */
+    line-height: 150%;
 }
 
 .portfolio-list{
-    /* display: flex;
-    flex-direction: row; */
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -62,7 +59,7 @@
 }
 
 .portfolio-img img{
-    width: 30dvw;
+    width : 30dvw;
     height: 30dvw;
     padding: 3dvw;
 
@@ -81,7 +78,7 @@
     font-family: Roboto;
     font-size: 3dvw;
     font-weight: 700;
-    line-height: 140%; /* 44.8px */
+    line-height: 140%;
 }
 
 .portfolio-detail {
@@ -89,7 +86,7 @@
     font-family: Roboto;
     font-size: 2dvh;
     font-weight: 400;
-    line-height: 150%; /* 32px */
+    line-height: 150%;
 }
 
 .portfolio-link {
@@ -98,5 +95,5 @@
     font-size: 2dvh;
 
     font-weight: 300;
-    line-height: 150%; /* 28px */
-}
+    line-height: 150%; 
+} */
