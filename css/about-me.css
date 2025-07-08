@@ -1,0 +1,26 @@
+/* #about-me-container{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+
+#about-left img{ 
+    width: 50dvw;
+    height: 70dvh;
+}
+
+#about-right {
+    align-items: center;
+    display: inline-block;
+    padding-right: 10dvw;
+}
+
+#about-right-content {
+    color: var(--Body, #1C1E53);
+    font-family: Roboto;
+    font-size: 3dvw;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 150%;
+} */

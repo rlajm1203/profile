@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellmin</title>
+    <script src="app.js"></script>
+    <style>
+        /* Reset */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background-color: black; line-height: 1.5; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        .container { max-width: 1440px; margin: 0 auto; padding: 1rem; }
+
+        .bebas-neue { font-family: "Bebas Neue"; font-weight: 100; }
+
+        .header { display: flex; display: flex; padding: 24px 60px; justify-content: space-between; align-items: center; border-bottom: solid #C7C7C7;}
+        .header-menu { display: flex; justify-content: flex-start; gap:32px; }
+        .header-logo { color: var(--Neutral-Offwhite, #C7C7C7); font-size: 32px; font-style: normal; font-weight: 400; }
+        .header-button { color: var(--Neutral-Offwhite, #C7C7C7); line-height: 150%; font-style: normal; font-weight: 500; font-size: 16px; }
+        
+        .body { display: flex; flex-direction: row; justify-content: space-between; margin : 5dvw;}
+        .body-left { display: flex; flex-direction: column; justify-content: space-around; gap : 10px; }
+        .body-left-title { color: var(--Neutral-White, #FFF); font-style: normal; font-weight: 400; font-size: 10dvw; }
+        .body-left-content {color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 18px; font-style: normal; font-weight: 400; line-height: 100%; } <!-- 글자 크기 조절 필요-->
+        .body-left-contact { display: flex; flex-direction: row; justify-content: flex-start; gap:3dvw;}
+        .body-left-contact-button { display: inline-block;}
+
+        .body-right { display: flex; justify-content: center; }
+        .body-right-img { width: 70%; height: 70%; }
+
+    </style>
+</head>
+<body>
+    <div class="header cotainer">
+        <div class="header-logo bebas-neue">BELLMIN</div>
+        <div class="header-menu">
+            <div class="header-button bebas-neue" id="About">About</div>
+            <div class="header-button bebas-neue" id="Projects">Projects</div>
+            <div class="header-button bebas-neue" id="Contact">Contact</div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="body">
+            <div class="body-left">
+                <div class="body-left-title bebas-neue">BELLMIN</div>
+                <div class="body-left-content">알 때까지 파고드는 개발자 김종민입니다.</div>
+                <div class="body-left-contact">
+                    <div class="body-left-contact-button bebas-neue"><img src="static/button.png"></div>
+                    <div class="body-left-contact-button" id="velog"><img src="static/velog.png"></div>
+                    <div class="body-left-contact-button" id="linkedIn"><img src="static/linkedIn.png"></div>
+                    <div class="body-left-contact-button" id="github"><img src="static/github.png"></div>
+                </div>
+            </div>
+            <div class="body-right">
+                <div class="body-right-img"><img src="static/body-img.png"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
