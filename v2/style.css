@@ -5,7 +5,7 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
 .container { max-width: 70dvw; margin: 0 auto; }
-.semi-container { border-bottom: 0.1dvw solid #C7C7C7; }
+.semi-container { padding-bottom: 2dvw; border-bottom: 0.1dvw solid #C7C7C7; }
 
 .bebas-neue { font-family: "Bebas Neue"; font-weight: 100; color: var(--Neutral-Offwhite, #C7C7C7);  }
 
