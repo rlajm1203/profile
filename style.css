@@ -46,9 +46,9 @@ img { max-width: 100%; display: block; }
 .info-content { color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1dvw; font-style: normal; font-weight: 400; line-height: 150%; }
 
 /* projects */
-.projects {  }
+.projects { display: flex; flex-direction: column; gap:2dvw; }
 .project {  }
-.project-header-title { color: var(--Neutral-White, #FFF); font-size: 7dvw; font-style: normal; font-weight: 400; line-height: 130%; }
+.project-header-title { color: var(--Neutral-White, #FFF); font-size: 5dvw; font-style: normal; font-weight: 400; line-height: 130%; }
 .project-header-semi-title { color: var(--Neutral-White, #FFF); font-family: "Bebas Neue"; font-size: 2dvw; font-style: normal; font-weight: 200; line-height: 130%;}
 
 .project-body { display: flex; flex-direction: row; justify-content: space-between; }
