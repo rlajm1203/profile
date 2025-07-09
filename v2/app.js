@@ -64,17 +64,19 @@ const projectsClickEvent = () => {
 
 const openModal = () => {
     const modal = document.getElementById('email-modal');
-    modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+    const overay = document.getElementById('email-modal-overay');
 
     modal.hidden = false;
+    overay.hidden = false;
     // document.body.style.overflow = 'hidden';
 }
 
 const closeModal = () => {
     const modal = document.getElementById('email-modal');
+    const overay = document.getElementById('email-modal-overay');
 
     modal.hidden = true;
-    // document.body.style.overflow = ''; 
+    overay.hidden = true;
 }
 
 const nonAction = () => {
@@ -89,6 +91,7 @@ const navigateTo = (url) => {
     window.open(url);
 }
 
+document.getElementById('email-modal-overay').addEventListener('click', ()=>closeModal());
 smoothScroll();
 contactClickEvent();
 projectsClickEvent();

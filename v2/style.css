@@ -339,6 +339,13 @@ img {
     align-self: stretch;
 
     gap: 2dvw;
+
+    width: 50%;
+
+    position: fixed;       /* 뷰포트 기준으로 위치 지정 */
+    top: 50%;              /* 세로 축 50% 지점 */
+    left: 50%;             /* 가로 축 50% 지점 */
+    transform: translate(-50%, -50%);
 }
 
 .email-modal-form {
