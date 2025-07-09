@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Bellmin</title>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </head>
+
 <body>
     <!-- header -->
     <section class="header">
         <div class="header-logo bebas-neue">BELLMIN</div>
         <div class="header-menu">
-            <a href="#about-me"><div class="header-button bebas-neue" id="About">About</div></a>
-            <a href="#projects"><div class="header-button bebas-neue" id="Projects">Projects</div></a>
-            <a href="#contact"><div class="header-button bebas-neue" id="Contact">Contact</div></a>
+            <a href="#about-me">
+                <div class="header-button bebas-neue" id="About">About</div>
+            </a>
+            <a href="#projects">
+                <div class="header-button bebas-neue" id="Projects">Projects</div>
+            </a>
+            <a href="#contact">
+                <div class="header-button bebas-neue" id="Contact">Contact</div>
+            </a>
         </div>
     </section>
 
@@ -26,10 +34,10 @@
                 <div class="title bebas-neue">BELLMIN</div>
                 <div class="body-left-content">알 때까지 파고드는 개발자 김종민입니다.</div>
                 <div class="social">
-                    <div class="social-button" id="contact-me"><img src="static/button.svg"></div>
-                    <div class="social-button" id="velog"><img src="static/velog.svg"></div>
-                    <div class="social-button" id="linkedIn"><img src="static/linkedIn.svg"></div>
-                    <div class="social-button" id="github"><img src="static/github.svg"></div>
+                    <div class="social-button" id="contact-me-button"><img src="static/button.svg" id="contact-me"></div>
+                    <div class="social-button" id="velog-button"><img src="static/velog.svg" id="velog"></div>
+                    <div class="social-button" id="linkedIn-button"><img src="static/linkedIn.svg" id="linkedIn"></div>
+                    <div class="social-button" id="github-button"><img src="static/github.svg" id="github"></div>
                 </div>
             </div>
 
@@ -39,133 +47,139 @@
         <div class="projects semi-container" id="projects">
             <div class="title bebas-neue">projects</div>
             <div class="project">
-                    <div class="project-header">
-                        <div class="project-header-title bebas-neue">EEOS,</div>
-                        <div class="project-header-semi-title bebas-neue">동아리 행사 관리 시스템</div>
-                    </div>
-                    <div class="project-body">
-                        <img class="project-img" src="static/project/eeos.svg">
-                        <div class="project-explain-container">
-                            <div class="project-name">EEOS</div>
-                            <div class="project-detail">Econovation Event Operating System 의 약자로<br>
-                                에코노베이션 동아리의 행사 관리 및 출석 체크 시스템입니다.</div>
-                            <div class="project-info">
-                                <div class="project-info-left">project info</div>
-                                <div class="project-info-right"></div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">year</div>
-                                <div class="project-info-right">2024.03 ~ NOW</div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">Role</div>
-                                <div class="project-info-right">back-end developer</div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-right">
-                                    1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응<br>
-                                    2. Redis Delayed Queue를 활용한 출석체크 예약기능 구현<br>
-                                    3. Tree 구조를 활용한, 댓글/답글 구조 모델링<br>
-                                </div>
-                            </div>
-                            <div class="project-social">
-                                <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project" id="eeos-view-project"></div>
-                                <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github" id="eeos-github"></div>
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">EEOS,</div>
+                    <div class="project-header-semi-title bebas-neue">동아리 행사 관리 시스템</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/eeos.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">EEOS</div>
+                        <div class="project-detail">Econovation Event Operating System 의 약자로<br>
+                            에코노베이션 동아리의 행사 관리 및 출석 체크 시스템입니다.</div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.03 ~ NOW</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응<br>
+                                2. Redis Delayed Queue를 활용한 출석체크 예약기능 구현<br>
+                                3. Tree 구조를 활용한, 댓글/답글 구조 모델링<br>
                             </div>
                         </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"
+                                    id="eeos-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"
+                                    id="eeos-github"></div>
+                        </div>
                     </div>
+                </div>
             </div>
 
             <div class="project">
-                    <div class="project-header">
-                        <div class="project-header-title bebas-neue">Econo-Recruit,</div>
-                        <div class="project-header-semi-title bebas-neue">동아리 리크루팅 플랫폼</div>
-                    </div>
-                    <div class="project-body">
-                        <img class="project-img" src="static/project/econo-recruit.svg">
-                        <div class="project-explain-container">
-                            <div class="project-name">Econo-Recruit</div>
-                            <div class="project-detail">Econovation 동아리의 신입 회원 모집 플랫폼입니다.</div>
-                            <div class="project-info">
-                                <div class="project-info-left">project info</div>
-                                <div class="project-info-right"></div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">year</div>
-                                <div class="project-info-right">2024.07 ~ NOW</div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">Role</div>
-                                <div class="project-info-right">back-end developer</div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-right">
-                                    1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응<br>
-                                    2. FSM 패턴을 적용하여 합/불 상태관리 시스템 도입 및 구현<br>
-                                    3. 이벤트 기반 합/불 메일링 자동화 시스템 구현<br>
-                                    4. 이메일 발송 시 DB Connection Timeout 으로 인한 문제 해결<br>
-                                </div>
-                            </div>
-                            <div class="project-social">
-                                <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project" id="econo-recruit-view-project"></div>
-                                <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github" id="econo-recruit-github"></div>
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">Econo-Recruit,</div>
+                    <div class="project-header-semi-title bebas-neue">동아리 리크루팅 플랫폼</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/econo-recruit.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">Econo-Recruit</div>
+                        <div class="project-detail">Econovation 동아리의 신입 회원 모집 플랫폼입니다.</div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.07 ~ NOW</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응<br>
+                                2. FSM 패턴을 적용하여 합/불 상태관리 시스템 도입 및 구현<br>
+                                3. 이벤트 기반 합/불 메일링 자동화 시스템 구현<br>
+                                4. 이메일 발송 시 DB Connection Timeout 으로 인한 문제 해결<br>
                             </div>
                         </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"
+                                    id="econo-recruit-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"
+                                    id="econo-recruit-github"></div>
+                        </div>
                     </div>
+                </div>
             </div>
 
             <div class="project">
-                    <div class="project-header">
-                        <div class="project-header-title bebas-neue">ABAS,</div>
-                        <div class="project-header-semi-title bebas-neue">농업 빅데이터 분석 웹 사이트</div>
-                    </div>
-                    <div class="project-body">
-                        <img class="project-img" src="static/project/abas.svg">
-                        <div class="project-explain-container">
-                            <div class="project-name">ABAS</div>
-                            <div class="project-detail">
-                                농업에 대한 빅데이터의<br>
-                                데이터 분석, 데이터 시각화, 데이터 예측과 같은<br>
-                                기능을 수행하는 AI 기반 웹 사이트입니다.
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">project info</div>
-                                <div class="project-info-right"></div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">year</div>
-                                <div class="project-info-right">2024.07 ~ 2025.06</div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-left">Role</div>
-                                <div class="project-info-right">back-end developer</div>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-info-right">
-                                    1. 본인 인증을 위한 이메일/문자 인증 설계 및 구현 (Naver SMS, Google SMTP)<br>
-                                    2. 구아바 캐시를 활용하여 효율적인 메모리 사용의 인증번호 관리 기능 구현<br>
-                                </div>
-                            </div>
-                            <div class="project-social">
-                                <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project" id="abas-view-project"></div>
-                                <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github" id="abas-github"></div>
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">ABAS,</div>
+                    <div class="project-header-semi-title bebas-neue">농업 빅데이터 분석 웹 사이트</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/abas.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">ABAS</div>
+                        <div class="project-detail">
+                            농업에 대한 빅데이터의<br>
+                            데이터 분석, 데이터 시각화, 데이터 예측과 같은<br>
+                            기능을 수행하는 AI 기반 웹 사이트입니다.
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.07 ~ 2025.06</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. 본인 인증을 위한 이메일/문자 인증 설계 및 구현 (Naver SMS, Google SMTP)<br>
+                                2. 구아바 캐시를 활용하여 효율적인 메모리 사용의 인증번호 관리 기능 구현<br>
                             </div>
                         </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"
+                                    id="abas-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"
+                                    id="abas-github"></div>
+                        </div>
                     </div>
+                </div>
             </div>
 
             <div class="project">
-                    <div class="project-header">
-                        <div class="project-header-title bebas-neue">Whoz-in,</div>
-                        <div class="project-header-semi-title bebas-neue">wi-fi 기반 동아리방 재실 확인 시스템</div>
-                    </div>
-                    <div class="project-body">
-                        <img class="project-img" src="static/project/whozIn.svg">
-                        <div class="project-explain-container">
-                            <div class="project-name">Whoz-In</div>
-                            <div class="project-detail">
-                                Wi-Fi 기술을 기반으로 하는<br>
-                                동아리방 재실 인원 현황 확인 서비스 입니다.</br>
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">Whoz-in,</div>
+                    <div class="project-header-semi-title bebas-neue">wi-fi 기반 동아리방 재실 확인 시스템</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/whozIn.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">Whoz-In</div>
+                        <div class="project-detail">
+                            Wi-Fi 기술을 기반으로 하는<br>
+                            동아리방 재실 인원 현황 확인 서비스 입니다.</br>
                             <div class="project-info">
                                 <div class="project-info-left">project info</div>
                                 <div class="project-info-right"></div>
@@ -188,8 +202,10 @@
                                 </div>
                             </div>
                             <div class="project-social">
-                                <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project" id="whozin-view-project"></div>
-                                <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github" id="whozin-github"></div>
+                                <div class="project-view"><img src="static/project/view_project.svg"
+                                        alt="whoz-in-view-project" id="whoz-in-view-project"></div>
+                                <div class="project-github"><img src="static/project/project_github.svg"
+                                        alt="whoz-in-github" id="whoz-in-github"></div>
                             </div>
                         </div>
                     </div>
@@ -205,7 +221,8 @@
             <div class="about-me-right">
                 <div class="mottos">
                     <div class="motto">저는 알 때까지 끊임 없이 파고들어 학습하는 백엔드 개발자입니다.</div>
-                    <div class="motto-explain">기술에 대한 이해도가 없으면, 안정적이고 신뢰할 수 있는 서비스를 관리하고 운영할 수 없습니다. 저는 타고난 끈기와 인내심으로 기술을 깊이 있게 학습합니다.</div>
+                    <div class="motto-explain">기술에 대한 이해도가 없으면, 안정적이고 신뢰할 수 있는 서비스를 관리하고 운영할 수 없습니다. 저는 타고난 끈기와 인내심으로
+                        기술을 깊이 있게 학습합니다.</div>
                 </div>
                 <div class="info-list">
                     <div class="info">
@@ -215,23 +232,23 @@
                     <div class="info">
                         <div class="info-title">자격증</div>
                         <div class="info-content">- SQLD</div>
-                        <div class="info-content">- 네트워크 관리사</div>            
+                        <div class="info-content">- 네트워크 관리사</div>
                     </div>
                     <div class="info">
                         <div class="info-title">수상내역</div>
                         <div class="info-content">- 전남대학교 AI 산학 협력 해커톤 동상 (2023.8)</div>
-                        <div class="info-content">- 전남대학교 프로그래밍 경진대회 장려상 (2025.6)</div>            
+                        <div class="info-content">- 전남대학교 프로그래밍 경진대회 장려상 (2025.6)</div>
                     </div>
                     <div class="info">
                         <div class="info-title">대외활동</div>
-                        <div class="info-content">- 전남대학교 IT 개발동아리 에코노베이션 (2023.9  ~ 2025.6)</div>
-                        <div class="info-content">- 전남대학교 IT 개발동아리 부회장 (2024.2 ~ 2025.1)</div> 
-                        <div class="info-content">- 우리에프아이에스 아카데미 5기 교육생</div>            
+                        <div class="info-content">- 전남대학교 IT 개발동아리 에코노베이션 (2023.9 ~ 2025.6)</div>
+                        <div class="info-content">- 전남대학교 IT 개발동아리 부회장 (2024.2 ~ 2025.1)</div>
+                        <div class="info-content">- 우리에프아이에스 아카데미 5기 교육생</div>
                     </div>
                     <div class="info">
                         <div class="info-title">기술</div>
                         <div class="info-content">- JAVA</div>
-                        <div class="info-content">- Spring-Boot</div> 
+                        <div class="info-content">- Spring-Boot</div>
                         <div class="info-content">- Docker</div>
                         <div class="info-content">- AWS</div>
                         <div class="info-content">- Git/Github</div>
@@ -250,4 +267,5 @@
         <div class="footer-content bebas-neue">footer</div>
     </footer>
 </body>
+
 </html>
