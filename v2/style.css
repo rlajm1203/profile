@@ -416,3 +416,5 @@ img {
 .email-modal-input #message {
     height: 30dvh;
 }
+
+#modal-close { background: white; }

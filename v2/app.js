@@ -1,6 +1,6 @@
+const sendEmailModal = document.getElementById("email-modal");
 const actionMap = {
     contact : {
-        "contact-me" : ()=>contactAction(),
         "velog" : () => navigateTo("https://velog.io/@rlajm1203"),
         "github" : () => navigateTo("https://github.com/rlajm1203"),
         "linkedIn" : () => navigateTo("https://www.linkedin.com/in/%EC%A2%85%EB%AF%BC-%EA%B9%80-9274a9284/"),
@@ -25,8 +25,6 @@ const actionMap = {
     }
 }
 
-const sendEmailModal = document.getElementById('email-modal');
-
 const smoothScroll = () => {
     document.querySelectorAll('.header-menu a').forEach(link => {
         link.addEventListener('click', e => {
@@ -38,7 +36,7 @@ const smoothScroll = () => {
 }
 
 const contactClickEvent = () => {
-    const ids = ['contact-me', 'velog', 'github', 'linkedIn'];
+    const ids = ['velog', 'github', 'linkedIn'];
     
     for(id of ids){
         const element = document.getElementById(id);
@@ -92,6 +90,19 @@ const navigateTo = (url) => {
         return;
     }
     window.open(url);
+}
+
+const sendEmail = () => {
+    const senderName = document.getElementById("sender-name");
+    const senderEmail = document.getElementById("sender-email");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+    console.log(senderName);
+    console.log(senderEmail);
+    console.log(subject);
+    console.log(message);
+    
 }
 
 smoothScroll();
