@@ -93,10 +93,10 @@ const navigateTo = (url) => {
 }
 
 const sendEmail = () => {
-    const senderName = document.getElementById("sender-name");
-    const senderEmail = document.getElementById("sender-email");
-    const subject = document.getElementById("subject");
-    const message = document.getElementById("message");
+    const senderName = document.getElementById("sender-name").value;
+    const senderEmail = document.getElementById("sender-email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
 
     console.log(senderName);
     console.log(senderEmail);
