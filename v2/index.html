@@ -12,24 +12,51 @@
         a { text-decoration: none; color: inherit; }
         img { max-width: 100%; display: block; }
 
-        .container { max-width: 70dvw; margin: 0 auto; }
+        .container { max-width: 100dvw; margin: 0 auto; }
 
-        .bebas-neue { font-family: "Bebas Neue"; font-weight: 100; }
+        .bebas-neue { font-family: "Bebas Neue"; font-weight: 100; color: var(--Neutral-Offwhite, #C7C7C7);  }
 
-        .header { display: flex; display: flex; margin: 24px 60px; justify-content: space-between; align-items: center; border-bottom: solid #C7C7C7;}
+        /* header */
+        .header { display: flex; margin: 3dvw 4dvw; justify-content: space-between; align-items: center; border-bottom: 0.1dvw solid #C7C7C7;}
+        .header-logo { font-size: 3dvw; font-style: normal; font-weight: 400; }
         .header-menu { display: flex; justify-content: flex-start; gap:3dvw; }
-        .header-logo { color: var(--Neutral-Offwhite, #C7C7C7); font-size: 3dvw; font-style: normal; font-weight: 400; }
-        .header-button { color: var(--Neutral-Offwhite, #C7C7C7); line-height: 150%; font-style: normal; font-weight: 500; font-size: 2dvw; }
+        .header-button { line-height: 150%; font-style: normal; font-weight: 500; font-size: 2dvw; }
         
-        .body { display: flex; flex-direction: row; justify-content: space-between; margin : 4dvw;}
+        /* body */
+        .body { display: flex; flex-direction: row; justify-content: space-between; margin : 4dvw; }
         .body-left { display: flex; flex-direction: column; justify-content: space-around; gap : 10px; }
-        .body-left-title { color: var(--Neutral-White, #FFF); font-style: normal; font-weight: 400; font-size: 10dvw; }
-        .body-left-content {color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 2dvw; font-style: normal; font-weight: 400; line-height: 100%; } <!-- 글자 크기 조절 필요-->
-        .body-left-contact { display: flex; flex-direction: row; justify-content: flex-start; gap:3dvw; }
-        .body-left-contact-button { display: inline-block; }
+        .title {  font-style: normal; font-weight: 400; font-size: 10dvw; color: var(--Neutral-white, #ffffff); }
+        .body-left-content { color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 2dvw; font-style: normal; font-weight: 400; line-height: 100%; }
+        
+        .social { display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap:2dvw; }
+        .social-button { width: 4dvw; height: 4dvw; }
 
         .body-right { display: flex; justify-content: center; }
         .body-right-img { width: 40%; height: 30%; }
+
+        #contact-me { width: 10dvw; height: 3dvw;}
+
+        /* about me */
+        .about-me { display: flex; flex-direction: row; justify-content: space-between; margin : 4dvw; border-top: 0.1dvw solid #C7C7C7; gap:4dvw; }
+        .about-me-left{ display: flex; flex-direction: column; justify-content: flex-start; align-items: center;}
+        .about-me-left-img { width: 20dvw; height: 30dvw; }
+
+        .about-me-right { display: flex; flex-direction: column; justify-content: flex-end; gap:5dvw; }
+        
+        .mottos { display:flex; flex-direction: column; justify-content: center; gap: 1dvw; }
+        .motto {color: #FFF; font-family: Manrope; font-size: 2dvw; font-style: normal; font-weight: 400; line-height: 140%; }
+        .motto-explain {color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1.3dvw; font-style: normal; font-weight: 100; line-height: 150%; }
+
+        .info-list { display: grid; grid-template-rows: 1fr 1fr 1fr; grid-template-columns: 1fr 1fr;}
+        .info { display: flex; flex-direction: column; gap: 0.5dvw;}
+        .info-title {color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1.7dvw; font-style: normal; font-weight: 500; line-height: 150%; }
+        .info-content { color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1dvw; font-style: normal; font-weight: 400; line-height: 150%; }
+
+        /* footer */
+        .footer { display: flex; display: flex; margin: 3dvw 4dvw; justify-content: space-between; align-items: center; border-top: 0.1dvw solid #C7C7C7; }
+        .footer-content { font-size: 2dvw; font-style: normal; line-height: 150%; }
+
+        
 
     </style>
 </head>
@@ -46,18 +73,67 @@
     <main class="container">
         <div class="body">
             <div class="body-left">
-                <div class="body-left-title bebas-neue">BELLMIN</div>
+                <div class="title bebas-neue">BELLMIN</div>
                 <div class="body-left-content">알 때까지 파고드는 개발자 김종민입니다.</div>
-                <div class="body-left-contact">
-                    <div class="body-left-contact-button bebas-neue"><img src="static/button.png"></div>
-                    <div class="body-left-contact-button" id="velog"><img src="static/velog.png"></div>
-                    <div class="body-left-contact-button" id="linkedIn"><img src="static/linkedIn.png"></div>
-                    <div class="body-left-contact-button" id="github"><img src="static/github.png"></div>
+                <div class="social">
+                    <div class="social-button" id="contact-me"><img src="static/button.svg"></div>
+                    <div class="social-button" id="velog"><img src="static/velog.svg"></div>
+                    <div class="social-button" id="linkedIn"><img src="static/linkedIn.svg"></div>
+                    <div class="social-button" id="github"><img src="static/github.svg"></div>
                 </div>
             </div>
 
             <div class="body-right-img"><img src="static/body-img.png"></div>
         </div>
+
+        <div class="about-me">
+            <div class="about-me-left">
+                <div class="title bebas-neue">about me</div>
+                <img class="about-me-left-img" src="static/2025_증명사진.png">
+            </div>
+            <div class="about-me-right">
+                <div class="mottos">
+                    <div class="motto">저는 알 때까지 끊임 없이 파고들어 학습하는 백엔드 개발자입니다.</div>
+                    <div class="motto-explain">기술에 대한 이해도가 없으면, 안정적이고 신뢰할 수 있는 서비스를 관리하고 운영할 수 없습니다. 저는 타고난 끈기와 인내심으로 기술을 깊이 있게 학습합니다.</div>
+                </div>
+                <div class="info-list">
+                    <div class="info">
+                        <div class="info-title">학력</div>
+                        <div class="info-content">- 전남대학교 소프트웨어 공학과 (2020.3 ~ 2026.2)</div>
+                    </div>
+                    <div class="info">
+                        <div class="info-title">자격증</div>
+                        <div class="info-content">- SQLD</div>
+                        <div class="info-content">- 네트워크 관리사</div>            
+                    </div>
+                    <div class="info">
+                        <div class="info-title">수상내역</div>
+                        <div class="info-content">- 전남대학교 AI 산학 협력 해커톤 동상 (2023.8)</div>
+                        <div class="info-content">- 전남대학교 프로그래밍 경진대회 장려상 (2025.6)</div>            
+                    </div>
+                    <div class="info">
+                        <div class="info-title">대외활동</div>
+                        <div class="info-content">- 전남대학교 IT 개발동아리 에코노베이션 (2023.9  ~ 2025.6)</div>
+                        <div class="info-content">- 전남대학교 IT 개발동아리 부회장 (2024.2 ~ 2025.1)</div> 
+                        <div class="info-content">- 우리에프아이에스 아카데미 5기 교육생</div>            
+                    </div>
+                    <div class="info">
+                        <div class="info-title">기술</div>
+                        <div class="info-content">- JAVA</div>
+                        <div class="info-content">- Spring-Boot</div> 
+                        <div class="info-content">- Docker</div>
+                        <div class="info-content">- AWS</div>
+                        <div class="info-content">- Git/Github</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer container">
+        <div class="footer-content bebas-neue">footer</div>
+        <div class="footer-content bebas-neue">footer</div>
+    </footer>
 </body>
 </html>
