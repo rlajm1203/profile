@@ -1,26 +1,26 @@
-const urlMap = {
+const actionMap = {
     contact : {
-        "contact-me" : null,
-        "velog" : "https://velog.io/@rlajm1203",
-        "github" : "https://github.com/rlajm1203",
-        "linkedIn" : "https://www.linkedin.com/in/%EC%A2%85%EB%AF%BC-%EA%B9%80-9274a9284/",
+        "contact-me" : ()=>nonAction(),
+        "velog" : () => navigateTo("https://velog.io/@rlajm1203"),
+        "github" : () => navigateTo("https://github.com/rlajm1203"),
+        "linkedIn" : () => navigateTo("https://www.linkedin.com/in/%EC%A2%85%EB%AF%BC-%EA%B9%80-9274a9284/"),
     },
     projects : {
         "eeos" : {
-            prod : "https://www.eeos.econovation.kr",
-            github : "https://github.com/JNU-econovation/EEOS-BE"
+            prod : () => navigateTo("https://www.eeos.econovation.kr"),
+            github : () => navigateTo("https://github.com/JNU-econovation/EEOS-BE")
         },
         "econo-recruit" : {
-            prod : null,
-            github : "https://github.com/JNU-econovation/econo-recruit"
+            prod : ()=>nonAction(),
+            github : () => navigateTo("https://github.com/JNU-econovation/econo-recruit")
         },
         "whoz-in" : {
-            prod : null,
-            github : "https://github.com/JNU-econovation/Whoz-In-BE"
+            prod : ()=>nonAction(),
+            github : () => navigateTo("https://github.com/JNU-econovation/Whoz-In-BE")
         },
         "abas" : {
-            prod : "https://fe.dev.abas.life",
-            github : null
+            prod : () => navigateTo("https://fe.dev.abas.life"),
+            github : ()=>nonAction()
         }
     }
 }
@@ -40,11 +40,9 @@ const contactClickEvent = () => {
     
     for(id of ids){
         const element = document.getElementById(id);
-        const url = urlMap.contact[id];
+        const action = actionMap.contact[id];
         
-        element.addEventListener('click', (e) => {
-            navigateTo(url);  
-        })
+        element.addEventListener('click', (e) => action())
     }
 }
 
@@ -56,16 +54,16 @@ const projectsClickEvent = () => {
     for(id of projectNames){    
         const elementView = document.getElementById(id+projectView);
         const elementGithub = document.getElementById(id+projectGithub);
-        const url = urlMap.projects[id];
+        const prodAction = actionMap.projects[id].prod;
+        const githubAction = actionMap.projects[id].github;
 
-        elementView.addEventListener('click', (e)=>{
-            navigateTo(url.prod);
-        });
-
-        elementGithub.addEventListener('click', (e)=>{
-            navigateTo(url.github);
-        });
+        elementView.addEventListener('click', (e)=>prodAction());
+        elementGithub.addEventListener('click', (e)=>githubAction());
     }
+}
+
+const nonAction = () => {
+    alert("현재는 지원하지 않습니다.");
 }
 
 const navigateTo = (url) => {

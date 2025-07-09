@@ -323,6 +323,16 @@ img {
 
 /* modal */
 
+.modal-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
 .email-modal[hidden] { display: none; }
 
 .email-modal {
@@ -392,7 +402,11 @@ img {
     gap: 16px;
 
     border-radius: 100px;
-    background: var(--primary, #D3E97A);
+    background: #D3E97A;
+}
+
+.email-modal button:hover {
+    background: #C4E14E;
 }
 
 .email-modal-input #message {
