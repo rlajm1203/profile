@@ -22,12 +22,13 @@ img { max-width: 100%; display: block; }
 .body-left-content { color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 2dvw; font-style: normal; font-weight: 400; line-height: 100%; }
 
 .social { display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap:2dvw; }
-.social-button { width: 4dvw; height: 4dvw; }
+/* .social-button { width: 4dvw; height: 4dvw; } */
+.social-button-img { height: 4dvw; }
 
 .body-right { display: flex; justify-content: center; }
 .body-right-img { width: 40%; height: 30%; }
 
-#contact-me-button { width: 10dvw; height: 3dvw;}
+/* #contact-me-button { width: 10dvw; height: 3dvw;} */
 
 /* about me */
 .about-me { display: flex; flex-direction: row; justify-content: space-between; gap:4dvw; }
