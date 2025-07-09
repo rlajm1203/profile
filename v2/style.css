@@ -323,7 +323,7 @@ img {
 
 /* modal */
 
-.hidden { display: none; }
+.email-modal[hidden] { display: none; }
 
 .email-modal {
     display: flex;
