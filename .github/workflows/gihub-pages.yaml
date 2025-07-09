@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
       - name: Deploy v2 folder
         uses: JamesIves/github-pages-deploy-action@v4
         with:
