@@ -3,74 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Bellmin</title>
     <script src="app.js"></script>
-    <style>
-        /* Reset */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Roboto', sans-serif; background-color: black; line-height: 1.5; }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
-
-        .container { max-width: 100dvw; margin: 0 auto; }
-
-        .bebas-neue { font-family: "Bebas Neue"; font-weight: 100; color: var(--Neutral-Offwhite, #C7C7C7);  }
-
-        /* header */
-        .header { display: flex; margin: 3dvw 4dvw; justify-content: space-between; align-items: center; border-bottom: 0.1dvw solid #C7C7C7;}
-        .header-logo { font-size: 3dvw; font-style: normal; font-weight: 400; }
-        .header-menu { display: flex; justify-content: flex-start; gap:3dvw; }
-        .header-button { line-height: 150%; font-style: normal; font-weight: 500; font-size: 2dvw; }
-        
-        /* body */
-        .body { display: flex; flex-direction: row; justify-content: space-between; margin : 4dvw; }
-        .body-left { display: flex; flex-direction: column; justify-content: space-around; gap : 10px; }
-        .title {  font-style: normal; font-weight: 400; font-size: 10dvw; color: var(--Neutral-white, #ffffff); }
-        .body-left-content { color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 2dvw; font-style: normal; font-weight: 400; line-height: 100%; }
-        
-        .social { display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap:2dvw; }
-        .social-button { width: 4dvw; height: 4dvw; }
-
-        .body-right { display: flex; justify-content: center; }
-        .body-right-img { width: 40%; height: 30%; }
-
-        #contact-me { width: 10dvw; height: 3dvw;}
-
-        /* about me */
-        .about-me { display: flex; flex-direction: row; justify-content: space-between; margin : 4dvw; border-top: 0.1dvw solid #C7C7C7; gap:4dvw; }
-        .about-me-left{ display: flex; flex-direction: column; justify-content: flex-start; align-items: center;}
-        .about-me-left-img { width: 20dvw; height: 30dvw; }
-
-        .about-me-right { display: flex; flex-direction: column; justify-content: flex-end; gap:5dvw; }
-        
-        .mottos { display:flex; flex-direction: column; justify-content: center; gap: 1dvw; }
-        .motto {color: #FFF; font-family: Manrope; font-size: 2dvw; font-style: normal; font-weight: 400; line-height: 140%; }
-        .motto-explain {color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1.3dvw; font-style: normal; font-weight: 100; line-height: 150%; }
-
-        .info-list { display: grid; grid-template-rows: 1fr 1fr 1fr; grid-template-columns: 1fr 1fr;}
-        .info { display: flex; flex-direction: column; gap: 0.5dvw;}
-        .info-title {color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1.7dvw; font-style: normal; font-weight: 500; line-height: 150%; }
-        .info-content { color: var(--Neutral-Offwhite, #C7C7C7); font-family: Manrope; font-size: 1dvw; font-style: normal; font-weight: 400; line-height: 150%; }
-
-        /* footer */
-        .footer { display: flex; display: flex; margin: 3dvw 4dvw; justify-content: space-between; align-items: center; border-top: 0.1dvw solid #C7C7C7; }
-        .footer-content { font-size: 2dvw; font-style: normal; line-height: 150%; }
-
-        
-
-    </style>
 </head>
 <body>
-    <div class="header cotainer">
+    <section class="header cotainer">
         <div class="header-logo bebas-neue">BELLMIN</div>
         <div class="header-menu">
-            <div class="header-button bebas-neue" id="About">About</div>
-            <div class="header-button bebas-neue" id="Projects">Projects</div>
-            <div class="header-button bebas-neue" id="Contact">Contact</div>
+            <a href="#about-me"><div class="header-button bebas-neue" id="About">About</div></a>
+            <a href="#projects"><div class="header-button bebas-neue" id="Projects">Projects</div></a>
+            <a href="#contact"><div class="header-button bebas-neue" id="Contact">Contact</div></a>
         </div>
-    </div>
+    </section>
 
-    <main class="container">
+    <section class="container" id="contact">
         <div class="body">
             <div class="body-left">
                 <div class="title bebas-neue">BELLMIN</div>
@@ -86,7 +33,161 @@
             <div class="body-right-img"><img src="static/body-img.png"></div>
         </div>
 
-        <div class="about-me">
+        <div class="projects semi-container" id="projects">
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">EEOS,</div>
+                    <div class="project-header-semi-title bebas-neue">동아리 행사 관리 시스템</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/eeos.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">EEOS</div>
+                        <div class="project-detail">Econovation Event Operating System 의 약자로<br>
+                            에코노베이션 동아리의 행사 관리 및 출석 체크 시스템입니다.</div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.03 ~ NOW</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응<br>
+                                2. Redis Delayed Queue를 활용한 출석체크 예약기능 구현<br>
+                                3. Tree 구조를 활용한, 댓글/답글 구조 모델링<br>
+                            </div>
+                        </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">Econo-Recruit,</div>
+                    <div class="project-header-semi-title bebas-neue">동아리 리크루팅 플랫폼</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/econo-recruit.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">Econo-Recruit</div>
+                        <div class="project-detail">Econovation 동아리의 신입 회원 모집 플랫폼입니다.</div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.07 ~ NOW</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응<br>
+                                2. FSM 패턴을 적용하여 합/불 상태관리 시스템 도입 및 구현<br>
+                                3. 이벤트 기반 합/불 메일링 자동화 시스템 구현<br>
+                                4. 이메일 발송 시 DB Connection Timeout 으로 인한 문제 해결<br>
+                            </div>
+                        </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">ABAS,</div>
+                    <div class="project-header-semi-title bebas-neue">농업 빅데이터 분석 웹 사이트</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/abas.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">ABAS</div>
+                        <div class="project-detail">Agriculture BigData Analysis System 의 약자로, 농업 빅데이터를 관리하고,<br>데이터 분석, 시각화, 예측 등의 기능을 수행하는 AI 기반 웹 사이트입니다.</div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.07 ~ 2025.06</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. 본인 인증을 위한 이메일/문자 인증 설계 및 구현 (Naver SMS, Google SMTP)<br>
+                                2. 구아바 캐시를 활용하여 효율적인 메모리 사용의 인증번호 관리 기능 구현<br>
+                            </div>
+                        </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-header-title bebas-neue">Whoz-in,</div>
+                    <div class="project-header-semi-title bebas-neue">wi-fi 기반 동아리방 재실 확인 시스템</div>
+                </div>
+                <div class="project-body">
+                    <img class="project-img" src="static/project/whozIn.svg">
+                    <div class="project-explain-container">
+                        <div class="project-name">Whoz-In</div>
+                        <div class="project-detail">Wi-Fi 기술을 기반으로 하는 동아리방 재실 인원 현황 확인 서비스입니다.
+                        </br>동아리 회원들의 불편함을 해소하고자 제작한 웹앱 기반의 프로젝트입니다.</div>
+                        <div class="project-info">
+                            <div class="project-info-left">project info</div>
+                            <div class="project-info-right"></div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">year</div>
+                            <div class="project-info-right">2024.09 ~ 2025.03</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-left">Role</div>
+                            <div class="project-info-right">back-end developer</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info-right">
+                                1. mDNS, ARP 프로토콜을 활용한 동아리방 재실 현황 알고리즘 설계 및 구현<br>
+                                2. Let’s encrypt를 활용한 SSL 적용으로 인한 AWS 서버 비용 감축<br>
+                                3. Spring Security 도입 및 Filter Chain 설정 고급화<br>
+                                4. 가독성과 유지보수를 위한 클린아키텍처 및 CQRS 적용<br>
+                                5. 도메인 로직 보호를 위한 도메인 중심 설계 적용<br>
+                            </div>
+                        </div>
+                        <div class="project-social">
+                            <div class="project-view"><img src="static/project/view_project.svg" alt="eeos-view-project"></div>
+                            <div class="project-github"><img src="static/project/project_github.svg" alt="eeos-github"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me semi-container" id="about-me">
             <div class="about-me-left">
                 <div class="title bebas-neue">about me</div>
                 <img class="about-me-left-img" src="static/2025_증명사진.png">
@@ -128,7 +229,7 @@
 
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer container">
