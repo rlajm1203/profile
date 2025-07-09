@@ -51,6 +51,32 @@
             <div class="body-right-img"><img src="static/body-img.png"></div>
         </div>
 
+        <div class="email-modal" id="email-modal" hidden>
+            <div class="email-modal-form">
+                <div class="email-modal-input">
+                    <p>Name</p>
+                    <textarea type="text" name="sender-name" id="sender-name"></textarea>
+                </div>
+                <div class="email-modal-input">
+                    <p>Email</p>
+                    <textarea type="email" name="sender-email" id="sender-email"></textarea>
+                </div>
+                <div class="email-modal-input">
+                    <p>Subject</p>
+                    <textarea type="text" name="subject" id="subject"></textarea>
+                </div>
+                <div class="email-modal-input">
+                    <p>Message</p>
+                    <textarea type="text" name="message" id="message"></textarea>
+                </div>
+
+                <div class="email-modal-button">
+                    <button id="email-send">SUBMIT</button>
+                    <button id="modal-close" class="modal-close" aria-label="닫기" onclick="closeModal()">닫기</button>
+                </div>
+            </div>
+        </div>
+
         <div class="projects semi-container" id="projects">
             <div class="title bebas-neue">projects</div>
             <div class="project">
@@ -266,33 +292,6 @@
         </div>
 
     </section>
-
-    <div class="modal-overlay" id="email-modal-overay" hidden></div>
-    <div class="email-modal" id="email-modal" hidden>
-            <div class="email-modal-form">
-                <div class="email-modal-input">
-                    <p>Name</p>
-                    <textarea type="text" name="sender-name" id="sender-name"></textarea>
-                </div>
-                <div class="email-modal-input">
-                    <p>Email</p>
-                    <textarea type="email" name="sender-email" id="sender-email"></textarea>
-                </div>
-                <div class="email-modal-input">
-                    <p>Subject</p>
-                    <textarea type="text" name="subject" id="subject"></textarea>
-                </div>
-                <div class="email-modal-input">
-                    <p>Message</p>
-                    <textarea type="text" name="message" id="message"></textarea>
-                </div>
-
-                <div class="email-modal-button">
-                    <button id="email-send">SUBMIT</button>
-                    <button id="modal-close" class="modal-close" aria-label="닫기" onclick="closeModal()">닫기</button>
-                </div>
-            </div>
-        </div>
 
     <!-- footer -->
     <footer class="footer">

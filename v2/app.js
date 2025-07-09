@@ -1,6 +1,6 @@
 const actionMap = {
     contact : {
-        "contact-me" : ()=>openModal(),
+        "contact-me" : ()=>contactAction(),
         "velog" : () => navigateTo("https://velog.io/@rlajm1203"),
         "github" : () => navigateTo("https://github.com/rlajm1203"),
         "linkedIn" : () => navigateTo("https://www.linkedin.com/in/%EC%A2%85%EB%AF%BC-%EA%B9%80-9274a9284/"),
@@ -24,6 +24,8 @@ const actionMap = {
         }
     }
 }
+
+const sendEmailModal = document.getElementById('email-modal');
 
 const smoothScroll = () => {
     document.querySelectorAll('.header-menu a').forEach(link => {
@@ -62,21 +64,22 @@ const projectsClickEvent = () => {
     }
 }
 
-const openModal = () => {
-    const modal = document.getElementById('email-modal');
-    const overay = document.getElementById('email-modal-overay');
+const contactAction = () => {
+    if(sendEmailModal.hidden){
+        openModal();
+        return;
+    }
 
-    modal.hidden = false;
-    overay.hidden = false;
+    closeModal();
+}
+
+const openModal = () => {
+    sendEmailModal.hidden = false;
     // document.body.style.overflow = 'hidden';
 }
 
 const closeModal = () => {
-    const modal = document.getElementById('email-modal');
-    const overay = document.getElementById('email-modal-overay');
-
-    modal.hidden = true;
-    overay.hidden = true;
+    sendEmailModal.hidden = true;
 }
 
 const nonAction = () => {
@@ -91,7 +94,6 @@ const navigateTo = (url) => {
     window.open(url);
 }
 
-document.getElementById('email-modal-overay').addEventListener('click', ()=>closeModal());
 smoothScroll();
 contactClickEvent();
 projectsClickEvent();
