@@ -265,7 +265,7 @@
             </div>
         </div>
 
-        <div class="email-modal" hidden>
+        <div class="email-modal" id="email-modal" hidden>
             <div class="modal-overlay"></div>
             <div class="email-modal-form">
                 <div class="email-modal-input">
@@ -284,11 +284,11 @@
                     <p>Message</p>
                     <textarea type="text" name="message" id="message"></textarea>
                 </div>
-            </div>
 
-            <div class="email-modal-button">
-                <button id="email-send">SUBMIT</button>
-                <button id="modal-close" class="modal-close" aria-label="닫기">닫기</button>
+                <div class="email-modal-button">
+                    <button id="email-send">SUBMIT</button>
+                    <button id="modal-close" class="modal-close" aria-label="닫기" onclick="closeModal()">닫기</button>
+                </div>
             </div>
         </div>
 

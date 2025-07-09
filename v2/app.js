@@ -1,6 +1,6 @@
 const actionMap = {
     contact : {
-        "contact-me" : ()=>nonAction(),
+        "contact-me" : ()=>openModal(),
         "velog" : () => navigateTo("https://velog.io/@rlajm1203"),
         "github" : () => navigateTo("https://github.com/rlajm1203"),
         "linkedIn" : () => navigateTo("https://www.linkedin.com/in/%EC%A2%85%EB%AF%BC-%EA%B9%80-9274a9284/"),
@@ -60,6 +60,21 @@ const projectsClickEvent = () => {
         elementView.addEventListener('click', (e)=>prodAction());
         elementGithub.addEventListener('click', (e)=>githubAction());
     }
+}
+
+const openModal = () => {
+    const modal = document.getElementById('email-modal');
+    modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+
+    modal.hidden = false;
+    // document.body.style.overflow = 'hidden';
+}
+
+const closeModal = () => {
+    const modal = document.getElementById('email-modal');
+
+    modal.hidden = true;
+    // document.body.style.overflow = ''; 
 }
 
 const nonAction = () => {

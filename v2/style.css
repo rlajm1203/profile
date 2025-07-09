@@ -330,9 +330,6 @@ img {
   background: rgba(0, 0, 0, 0.6);
 }
 
-
-
-
 .email-modal[hidden] { display: none; }
 
 .email-modal {
@@ -391,6 +388,12 @@ img {
     font-style: normal;
     font-weight: 300;
     line-height: 130%;
+}
+
+.email-modal-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .email-modal button {
