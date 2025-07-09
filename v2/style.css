@@ -27,7 +27,7 @@ img { max-width: 100%; display: block; }
 .body-right { display: flex; justify-content: center; }
 .body-right-img { width: 40%; height: 30%; }
 
-#contact-me { width: 10dvw; height: 3dvw;}
+#contact-me-button { width: 10dvw; height: 3dvw;}
 
 /* about me */
 .about-me { display: flex; flex-direction: row; justify-content: space-between; gap:4dvw; }
