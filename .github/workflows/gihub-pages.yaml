@@ -11,6 +11,8 @@ jobs:
       - name: Deploy v2 folder
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: v2               
+          folder: v2       
           clean: true         
