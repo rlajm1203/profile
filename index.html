@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    
+
     <link rel="stylesheet" href="style.css">
     <title>Bellmin</title>
-    <script src="app.js" defer></script>
+    <script src="script/app.js" defer></script>
 </head>
 
 <body>
@@ -37,14 +37,44 @@
                 <div class="title bebas-neue">BELLMIN</div>
                 <div class="body-left-content">알 때까지 파고드는 개발자 김종민입니다.</div>
                 <div class="social">
-                    <div class="social-button" id="contact-me-button"><img src="static/button.svg" id="contact-me"></div>
-                    <div class="social-button" id="velog-button"><img src="static/velog.svg" id="velog"></div>
-                    <div class="social-button" id="linkedIn-button"><img src="static/linkedIn.svg" id="linkedIn"></div>
-                    <div class="social-button" id="github-button"><img src="static/github.svg" id="github"></div>
+                    <div class="social-button" id="contact-me-button" onclick="contactAction()"><img src="static/button.svg"
+                            class="social-button-img" id="contact-me"></div>
+                    <div class="social-button" id="velog-button"><img src="static/velog.svg" class="social-button-img"
+                            id="velog"></div>
+                    <div class="social-button" id="linkedIn-button"><img src="static/linkedIn.svg"
+                            class="social-button-img" id="linkedIn"></div>
+                    <div class="social-button" id="github-button"><img src="static/github.svg" class="social-button-img"
+                            id="github"></div>
                 </div>
             </div>
 
             <div class="body-right-img"><img src="static/body-img.png"></div>
+        </div>
+
+        <div class="email-modal" id="email-modal" hidden>
+            <div class="email-modal-form">
+                <div class="email-modal-input">
+                    <p>Name</p>
+                    <textarea type="text" name="sender-name" id="sender-name"></textarea>
+                </div>
+                <div class="email-modal-input">
+                    <p>Email</p>
+                    <textarea type="email" name="sender-email" id="sender-email"></textarea>
+                </div>
+                <div class="email-modal-input">
+                    <p>Subject</p>
+                    <textarea type="text" name="subject" id="subject"></textarea>
+                </div>
+                <div class="email-modal-input">
+                    <p>Message</p>
+                    <textarea type="text" name="message" id="message"></textarea>
+                </div>
+
+                <div class="email-modal-button">
+                    <button id="modal-close" class="modal-close" aria-label="닫기" onclick="closeModal()">닫기</button>
+                    <button id="email-send" onclick="nonAction()">SUBMIT</button>
+                </div>
+            </div>
         </div>
 
         <div class="projects semi-container" id="projects">
@@ -260,7 +290,7 @@
                 </div>
             </div>
         </div>
- 
+
     </section>
 
     <!-- footer -->
@@ -268,10 +298,6 @@
         <div class="footer-content bebas-neue">footer</div>
         <div class="footer-content bebas-neue">footer</div>
     </footer>
-
-    <div class="email-send-modal">
-        <textarea></textarea>
-    </div>
 </body>
 
 </html>
