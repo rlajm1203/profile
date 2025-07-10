@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'com.bellmin'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+shadowJar {
+    archiveBaseName.set('email-sender')   // 원하는 JAR 이름
+    archiveClassifier.set('')             // suffix 없이
+    archiveVersion.set(version)
+    // 필요하다면 mergeServiceFiles(), relocate() 등 커스터마이징
+}
+
+dependencies {
+
+    implementation 'com.amazonaws:aws-lambda-java-core:1.2.3'
+    implementation 'com.amazonaws:aws-java-sdk-kms:1.12.711'
+    implementation 'com.amazonaws:aws-java-sdk-core:1.12.711'
+    implementation 'com.amazonaws:aws-lambda-java-events:3.11.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.17.1'
+    runtimeOnly 'com.amazonaws:aws-lambda-java-log4j2:1.5.1'
+    implementation 'software.amazon.awssdk:s3:2.28.29'
+    implementation 'org.slf4j:slf4j-nop:2.0.16'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+task buildZip(type: Zip) {
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtimeClasspath
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+build.dependsOn buildZip
