@@ -31,24 +31,24 @@ export default function AboutSection() {
           <div className="info flex flex-col gap-2">
             <h3 className="info-title text-[1.7dvw] font-medium text-neutral-400">학력</h3>
             <p className="info-content text-[1dvw] text-neutral-400">
-              - 전남대학교 소프트웨어 공학과 (2020.3 ~ 2026.2)
+              - 전남대학교 소프트웨어공학과 (2020.3 ~ 2026.2)
             </p>
           </div>
           <div className="info flex flex-col gap-2">
             <h3 className="info-title text-[1.7dvw] font-medium text-neutral-400">자격증</h3>
             <p className="info-content text-[1dvw] text-neutral-400">- SQLD</p>
-            <p className="info-content text-[1dvw] text-neutral-400">- 네트워크 관리사</p>
+            <p className="info-content text-[1dvw] text-neutral-400">- 네트워크 관리사 2급</p>
           </div>
           <div className="info flex flex-col gap-2">
             <h3 className="info-title text-[1.7dvw] font-medium text-neutral-400">수상내역</h3>
-            <p className="info-content text-[1dvw] text-neutral-400">- AI 산학 협력 해커톤 동상 (2023.8)</p>
-            <p className="info-content text-[1dvw] text-neutral-400">- 프로그래밍 경진대회 장려상 (2025.6)</p>
+            <p className="info-content text-[1dvw] text-neutral-400">- 전남대학교 AI 산학 협력 해커톤 동상 (2023.8)</p>
+            <p className="info-content text-[1dvw] text-neutral-400">- 전남대학교 프로그래밍 경진대회 장려상 (2025.6)</p>
             <p className="info-content text-[1dvw] text-neutral-400">- Programmers PCCP Level 2</p>
           </div>
           <div className="info flex flex-col gap-2">
             <h3 className="info-title text-[1.7dvw] font-medium text-neutral-400">대외활동</h3>
-            <p className="info-content text-[1dvw] text-neutral-400">- 에코노베이션 (2023.9 ~ 2025.6)</p>
-            <p className="info-content text-[1dvw] text-neutral-400">- 개발동아리 부회장 (2024.2 ~ 2025.1)</p>
+            <p className="info-content text-[1dvw] text-neutral-400">- 전남대학교 IT 개발동아리 에코노베이션 (2023.9 ~ 2025.6)</p>
+            <p className="info-content text-[1dvw] text-neutral-400">- 전남대학교 IT 개발동아리 부회장 (2024.2 ~ 2025.1)</p>
             <p className="info-content text-[1dvw] text-neutral-400">- 우리에프아이에스 아카데미 5기</p>
           </div>
           <div className="info flex flex-col gap-2">
