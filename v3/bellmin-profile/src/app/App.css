@@ -1,0 +1,428 @@
+/* 또는 @import 방식 */
+@import "tailwindcss";
+
+*,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: black;
+        line-height: 1.5;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .container {
+        max-width: 70dvw;
+        margin: 0 auto;
+    }
+
+    .semi-container {
+        padding-bottom: 2dvw;
+        border-bottom: 0.1dvw solid #C7C7C7;
+    }
+
+    .bebas-neue {
+        font-family: "Bebas Neue";
+        font-weight: 100;
+        color: var(--Neutral-Offwhite, #C7C7C7);
+    }
+
+    /* header */
+    .header {
+        display: flex;
+        margin: 3dvw 4dvw;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.1dvw solid #C7C7C7;
+    }
+
+    .header-logo {
+        font-size: 3dvw;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3dvw;
+    }
+
+    .header-button {
+        line-height: 150%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2dvw;
+    }
+
+    /* body */
+    .body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .body-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10dvw;
+        color: var(--Neutral-white, #ffffff);
+    }
+
+    .body-left-content {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 2dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2dvw;
+    }
+
+    /* .social-button { width: 4dvw; height: 4dvw; } */
+    .social-button-img {
+        height: 4dvw;
+    }
+
+    .body-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .body-right-img {
+        width: 40%;
+        height: 30%;
+    }
+
+    /* #contact-me-button { width: 10dvw; height: 3dvw;} */
+
+    /* about me */
+    .about-me {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4dvw;
+    }
+
+    .about-me-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .about-me-left-img {
+        width: 20dvw;
+        height: 30dvw;
+    }
+
+    .about-me-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 5dvw;
+    }
+
+    .mottos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1dvw;
+    }
+
+    .motto {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 2dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .motto-explain {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 1.3dvw;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 150%;
+    }
+
+    .info-list {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5dvw;
+    }
+
+    .info-title {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 1.7dvw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .info-content {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 1dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    /* projects */
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 2dvw;
+    }
+
+    .project {}
+
+    .project-header-title {
+        color: var(--Neutral-White, #FFF);
+        font-size: 5dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .project-header-semi-title {
+        color: var(--Neutral-White, #FFF);
+        font-family: "Bebas Neue";
+        font-size: 2dvw;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 130%;
+    }
+
+    .project-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project-img {
+        width: 30dvw;
+        height: 30dvw;
+        margin-top: 1dvw;
+    }
+
+    .project-explain-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .project-name {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 2.5dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .project-detail {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 1.5dvw;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 150%;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 0.1dvw solid var(--Neutral-Dark-Gray, #484848);
+        padding: 1dvw;
+    }
+
+    .project-info-left {
+        color: var(--Neutral-White, #FFF);
+        font-family: Manrope;
+        font-size: 1dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+
+    .project-info-right {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 1dvw;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 160%;
+    }
+
+    .project-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .project-social img {
+        width: 7dvw;
+        height: 3dvw;
+        margin: 1dvw;
+    }
+
+    /* footer */
+    .footer {
+        display: flex;
+        margin: 3dvw 4dvw;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 0.1dvw solid #C7C7C7;
+    }
+
+    .footer-content {
+        font-size: 2dvw;
+        font-style: normal;
+        line-height: 150%;
+    }
+
+
+    /* modal */
+
+    .modal-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .email-modal[hidden] {
+        display: none;
+    }
+
+    .email-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+
+        gap: 2dvw;
+        padding: 1dvw;
+    }
+
+    .email-modal-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        gap: 1dvw;
+    }
+
+    .email-modal-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        align-self: stretch;
+
+        width: 100%;
+    }
+
+    .email-modal-input p {
+        color: var(--Neutral-Offwhite, #C7C7C7);
+        font-family: Manrope;
+        font-size: 1.5dvw;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 160%;
+    }
+
+    .email-modal-input textarea {
+        display: flex;
+        padding: 1dvw;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 4px;
+        background: #1A1A1A;
+
+        resize: none;
+        overflow: auto;
+
+        color: #FFF;
+
+        font-family: Manrope;
+        font-size: 1dvw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    .email-modal-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .email-modal button {
+        display: flex;
+        height: 3dvw;
+        padding: 20px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        border-radius: 100px;
+        background: #D3E97A;
+    }
+
+    .email-modal button:hover {
+        background: #C4E14E;
+    }
+
+    .email-modal-input #message {
+        height: 30dvh;
+    }
+
+    #modal-close {
+        background: white;
+    }
