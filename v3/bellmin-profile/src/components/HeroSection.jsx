@@ -12,7 +12,15 @@ export default function HeroSection({ onContactClick }) {
           <button onClick={onContactClick} className="social-button">
             <img fetchPriority="high" src="static/button.svg" alt="Contact" />
           </button>
-          {/* 나머지 버튼도 마찬가지 */}
+          <button onClick={()=>window.open("https://velog.io/@rlajm1203")} className="social-button">
+            <img fetchPriority="high" src="static/velog.svg" alt="Contact" />
+          </button>
+          <button onClick={()=>window.open("")} className="social-button">
+            <img fetchPriority="high" src="static/linkedIn.svg" alt="Contact" />
+          </button>
+          <button onClick={()=>window.open("https://github.com/rlajm1203")} className="social-button">
+            <img fetchPriority="high" src="static/github.svg" alt="Contact" />
+          </button>
         </div>
       </div>
       <div className="body-right-img">
