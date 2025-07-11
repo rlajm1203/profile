@@ -50,6 +50,7 @@ export default function Projects() {
                       fetchPriority="high"
                       src="static/project/view_project.svg"
                       alt="eeos-view-project"
+                      onClick={()=>window.open(project.viewLink)}
                     />
                   </div>
                   <div className="project-github">
@@ -57,6 +58,7 @@ export default function Projects() {
                       fetchPriority="high"
                       src="static/project/project_github.svg"
                       alt="eeos-github"
+                      onClick={()=>window.open(project.githubLink)}
                     />
                   </div>
                 </div>

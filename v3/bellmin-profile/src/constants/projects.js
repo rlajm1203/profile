@@ -13,8 +13,8 @@ export const PROJECTS = [
     description: `1. 짧은 기간 내 코드베이스를 빠르게 이해하여 프로젝트 전반 구조를 파악하여 업무 적응
                   2. Redis Delayed Queue를 활용한 출석체크 예약기능 구현
                   3. Tree 구조를 활용한, 댓글/답글 구조 모델링`,
-    viewLink: "#",    // TODO: 실제 프로젝트 URL로 교체
-    githubLink: "#"  // TODO: 실제 GitHub 레포로 교체
+    viewLink: "https://www.eeos.econovation.kr",    // TODO: 실제 프로젝트 URL로 교체
+    githubLink: "https://github.com/JNU-econovation/EEOS-BE"  // TODO: 실제 GitHub 레포로 교체
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const PROJECTS = [
                   3. 이벤트 기반 합/불 메일링 자동화 시스템 구현
                   4. 이메일 발송 시 DB Connection Timeout 문제 해결`,
     viewLink: "#",
-    githubLink: "#"
+    githubLink: "https://github.com/JNU-econovation/econo-recruit"
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const PROJECTS = [
     role: "back-end developer",
     description: `1. 본인 인증을 위한 이메일/문자 인증 설계 및 구현 (Naver SMS, Google SMTP)
                   2. 구아바 캐시를 활용하여 효율적인 메모리 사용의 인증번호 관리 기능 구현`,
-    viewLink: "#",
+    viewLink: "https://fe.dev.abas.life",
     githubLink: "#"
   },
   {
@@ -64,6 +64,6 @@ export const PROJECTS = [
                   4. 가독성과 유지보수를 위한 클린 아키텍처 및 CQRS 적용
                   5. 도메인 로직 보호를 위한 도메인 중심 설계 적용`,
     viewLink: "#",
-    githubLink: "#"
+    githubLink: "https://github.com/JNU-econovation/Whoz-In-BE"
   }
 ];
