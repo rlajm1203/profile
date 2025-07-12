@@ -15,7 +15,7 @@ export default function AboutSection() {
         />
       </div>
 
-      <div className="about-me-right flex flex-col justify-center gap-8">
+      <div className="about-me-right flex flex-col justify-start">
         <div className="mottos flex flex-col gap-4">
           <p className="motto text-[2dvw] font-normal text-white">
             저는 알 때까지 끊임 없이 파고들어 학습하는 백엔드 개발자입니다.

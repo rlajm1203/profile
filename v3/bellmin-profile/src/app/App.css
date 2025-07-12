@@ -153,7 +153,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 5dvw;
+    gap: 3dvw;
 }
 
 .mottos {
@@ -201,12 +201,14 @@ img {
     font-style: normal !important;
     font-weight: 500 !important;
     line-height: 150% !important;
+
+    margin: 0 !important;
 }
 
 .info-content {
     color: var(--Neutral-Offwhite, #C7C7C7) !important;
     font-family: Manrope !important;
-    font-size: 1dvw !important;
+    font-size: 1.2dvw !important;
     font-style: normal !important;
     font-weight: 300 !important;
     line-height: 150% !important;
