@@ -24,7 +24,7 @@ export default function HeroSection({ onContactClick }) {
         </div>
       </div>
       <div className="body-right-img">
-        <img fetchPriority="high" src="profile/static/body-img.png" alt="" />
+        <img fetchPriority="high" src={`${import.meta.env.BASE_URL}/static/body-img.png`} alt="" />
       </div>
     </section>
   );
