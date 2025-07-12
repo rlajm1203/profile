@@ -4,7 +4,7 @@ import profileImg from '/static/profile-img.png'; // 실제 경로에 맞게 수
 
 export default function AboutSection() {
   return (
-    <section id="about-me" className="semi-container flex flex-row justify-between gap-16 my-8">
+    <section id="about-me" className="container semi-container !flex !flex-row !justify-between !gap-16 !my-8">
       {/* Left: Image & Title */}
       <div className="about-me-left flex flex-col items-center">
         <h2 className="title bebas-neue mb-6 text-[5dvw]">about me</h2>

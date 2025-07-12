@@ -9,14 +9,20 @@
     padding: 0;
 }
 
+#root {
+    height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: black;
     line-height: 1.5;
+    height: 100%;
 }
 
 a {
@@ -40,7 +46,7 @@ img {
 }
 
 .bebas-neue {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue" !important;
     font-weight: 100;
     color: var(--Neutral-Offwhite, #C7C7C7);
 }
@@ -92,6 +98,7 @@ img {
     font-weight: 400;
     font-size: 10dvw;
     color: var(--Neutral-white, #ffffff);
+    margin: 1dvw 0 !important;
 }
 
 .body-left-content {
@@ -129,12 +136,6 @@ img {
 /* #contact-me-button { width: 10dvw; height: 3dvw;} */
 
 /* about me */
-.about-me {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 4dvw;
-}
 
 .about-me-left {
     display: flex;
@@ -145,7 +146,7 @@ img {
 
 .about-me-left-img {
     width: 20dvw;
-    height: 30dvw;
+    height: 20dvw;
 }
 
 .about-me-right {
@@ -165,7 +166,7 @@ img {
 .motto {
     color: #FFF;
     font-family: Manrope;
-    font-size: 2dvw;
+    font-size: 2dvw !important;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
@@ -182,32 +183,33 @@ img {
 
 .info-list {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr)
 }
 
 .info {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 0.5dvw;
 }
 
 .info-title {
-    color: var(--Neutral-Offwhite, #C7C7C7);
-    font-family: Manrope;
-    font-size: 1.7dvw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
+    color: var(--Neutral-Offwhite, #C7C7C7) !important;
+    font-family: Manrope !important;
+    font-size: 1.7dvw !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 150% !important;
 }
 
 .info-content {
-    color: var(--Neutral-Offwhite, #C7C7C7);
-    font-family: Manrope;
-    font-size: 1dvw;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 150%;
+    color: var(--Neutral-Offwhite, #C7C7C7) !important;
+    font-family: Manrope !important;
+    font-size: 1dvw !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: 150% !important;
 }
 
 /* projects */
@@ -273,9 +275,9 @@ img {
 }
 
 .project-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     border-bottom: 0.1dvw solid var(--Neutral-Dark-Gray, #484848);
     padding: 1dvw;
 }
@@ -432,4 +434,13 @@ img {
 
 #modal-close {
     background: white;
+}
+
+/* reveal */
+.reveal .slides > section {
+  text-align: left !important;
+}
+
+.reveal p {
+    margin : 0 !important;
 }
