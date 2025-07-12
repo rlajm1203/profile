@@ -4,8 +4,7 @@ import profileImg from '/static/profile-img.png'; // 실제 경로에 맞게 수
 
 export default function AboutSection() {
   return (
-    <section id="about-me" className="container semi-container !flex !flex-row !justify-between !gap-16 !my-8">
-      {/* Left: Image & Title */}
+    <div className="semi-container !flex !flex-row !justify-between !gap-16">
       <div className="about-me-left flex flex-col items-center">
         <h2 className="title bebas-neue mb-6 text-[5dvw]">about me</h2>
         <img
@@ -16,7 +15,6 @@ export default function AboutSection() {
         />
       </div>
 
-      {/* Right: Mottos & Info List */}
       <div className="about-me-right flex flex-col justify-center gap-8">
         <div className="mottos flex flex-col gap-4">
           <p className="motto text-[2dvw] font-normal text-white">
@@ -61,6 +59,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

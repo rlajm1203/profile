@@ -52,22 +52,54 @@ function App() {
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
       />
-      <ProfileHeader className="fixed top-0 w-full z-50" />
+
       <div className="reveal" ref={deckDivRef}>
         <div className="slides">
-          <section><div className="container"><HeroSection onContactClick={() => setModalOpen(true)} /></div></section>
-          {PROJECTS.map((project) => {
-            return (
-              <section><div className="container"><Project project={project} /></div></section>
-            )
-          })}
-          <section><div><AboutSection /></div></section>
-        </div>
 
+          <section>
+            {header()}
+            {heroSection()}
+          </section>
+
+          {projects()}
+
+          <section>
+            {aboutMe()}
+          </section>
+
+        </div>
       </div>
-      <ProfileFooter className="fixed top-0 w-full z-50" />
+
     </>
   );
+}
+
+function aboutMe() {
+  return <div className="container"><AboutSection /></div>
+}
+
+function header() {
+  return <ProfileHeader className="fixed top-0 w-full z-50" />
+}
+
+function heroSection() {
+  return (
+    <div className="container">
+      <HeroSection onContactClick={() => setModalOpen(true)} />
+    </div>
+  )
+}
+
+function projects() {
+  return PROJECTS.map((project) => {
+    return (
+      <section>
+        <div className="container">
+          <Project project={project} />
+        </div>
+      </section>
+    )
+  })
 }
 
 export default App

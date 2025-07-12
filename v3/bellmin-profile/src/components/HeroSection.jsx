@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HeroSection({ onContactClick }) {
   return (
-    <section className="semi-container !flex !flex-row !justify-between">
+    <section className="body semi-container !flex !flex-row !justify-between">
       <div className="body-left">
         <h1 className="title bebas-neue">BELLMIN</h1>
         <p className="body-left-content">
