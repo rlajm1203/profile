@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy v2 folder
+      - name: push gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           with:
