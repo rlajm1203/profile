@@ -18,7 +18,7 @@ export default function Project({ project }) {
               <img
                 className="project-img"
                 fetchPriority="high"
-                src={`${process.env.PUBLIC_URL}`+project.imageSrc}
+                src={`${import.meta.env.BASE_URL}${project.imageSrc}`}
                 alt="project-img"
               />
               <div className="project-explain-container">
