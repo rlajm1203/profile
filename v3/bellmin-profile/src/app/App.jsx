@@ -7,7 +7,6 @@ import AboutSection from '@/components/AboutSection'
 import ProfileFooter from '@/components/ProfileFooter'
 import EmailModal from '@/components/EmailModal'
 
-
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
 
