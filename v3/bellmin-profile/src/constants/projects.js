@@ -20,8 +20,7 @@ export const PROJECTS = [
     id: 2,
     title: "Econo-Recruit",
     semiTitle: "동아리 리크루팅 플랫폼",
-    detail: `
-    Econovation 동아리의 신입 회원 모집 플랫폼입니다.
+    detail: `Econovation 동아리의 신입 회원 모집 플랫폼입니다.
     `,
     imageSrc: "/static/project/econo-recruit.svg",
     year: "2024.07 ~ NOW",

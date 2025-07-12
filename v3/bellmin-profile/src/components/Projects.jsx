@@ -20,7 +20,7 @@ export default function Projects() {
                 className="project-img"
                 fetchPriority="high"
                 src={project.imageSrc}
-                alt="EEOS"
+                alt="project-img"
               />
               <div className="project-explain-container">
                 <div className="project-name">{project.title}</div>
@@ -44,22 +44,18 @@ export default function Projects() {
                     {project.description}
                   </div>
                 </div>
-                <div className="project-social">
-                  <div className="project-view">
-                    <img
-                      fetchPriority="high"
-                      src="static/project/view_project.svg"
-                      alt="eeos-view-project"
-                      onClick={()=>window.open(project.viewLink)}
-                    />
+                <div className="project-social flex gap-6 text-sm">
+                  <div
+                    className="project-view text-[#D3E97A] border-b border-[#D3E97A] hover:text-[#576031] hover:border-[#576031]"
+                    onClick={() => window.open(project.viewLink)}
+                  >
+                    WEB VIEW
                   </div>
-                  <div className="project-github">
-                    <img
-                      fetchPriority="high"
-                      src="static/project/project_github.svg"
-                      alt="eeos-github"
-                      onClick={()=>window.open(project.githubLink)}
-                    />
+                  <div
+                    className="project-github text-[#D3E97A] border-b border-[#D3E97A] hover:text-[#576031] hover:border-[#576031]"
+                    onClick={() => window.open(project.githubLink)}
+                  >
+                    PROJECT GITHUB
                   </div>
                 </div>
               </div>

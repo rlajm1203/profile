@@ -303,6 +303,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding: 1dvw;
 }
 
 .project-social img {
