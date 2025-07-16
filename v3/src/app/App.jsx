@@ -17,11 +17,39 @@ import "reveal.js/dist/theme/black.css";
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const deckDivRef = useRef(null); // reference to deck container div
-  const deckRef = useRef(null); // reference to deck reveal instance
+  const deckDivRef = useRef(null);
+  const deckRef = useRef(null);
+
+  const aboutMe = () => {
+    return <div className="container"><AboutSection /></div>
+  }
+
+  const header = () => {
+    return <ProfileHeader className="fixed top-0 w-full z-50" />
+  }
+
+  const heroSection = () => {
+    return (
+        <div className="container">
+          <HeroSection onContactClick={() => setModalOpen(true)} />
+        </div>
+    )
+  }
+
+  const projects = () => {
+    return PROJECTS.map((project) => {
+      return (
+          <section>
+            <div className="container">
+              <Project project={project} />
+            </div>
+          </section>
+      )
+    })
+  }
 
   useEffect(() => {
-    // Prevents double initialization in strict mode
+
     if (deckRef.current) return;
 
     deckRef.current = new Reveal(deckDivRef.current, {
@@ -40,8 +68,9 @@ function App() {
           deckRef.current.destroy();
           deckRef.current = null;
         }
-      } catch (e) {
-        console.warn("Reveal.js destroy call failed.");
+      } catch (error) {
+        console.log(error);
+        console.warn("Reveal.js 종료 실패");
       }
     };
   }, []);
@@ -74,32 +103,6 @@ function App() {
   );
 }
 
-function aboutMe() {
-  return <div className="container"><AboutSection /></div>
-}
 
-function header() {
-  return <ProfileHeader className="fixed top-0 w-full z-50" />
-}
-
-function heroSection() {
-  return (
-    <div className="container">
-      <HeroSection onContactClick={() => setModalOpen(true)} />
-    </div>
-  )
-}
-
-function projects() {
-  return PROJECTS.map((project) => {
-    return (
-      <section>
-        <div className="container">
-          <Project project={project} />
-        </div>
-      </section>
-    )
-  })
-}
 
 export default App
