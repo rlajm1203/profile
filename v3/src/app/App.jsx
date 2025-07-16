@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import {createPortal} from 'react-dom';
 
 import './App.css'
 import ProfileHeader from '@/components/ProfileHeader'
@@ -77,10 +78,10 @@ function App() {
 
   return (
     <>
-      <EmailModal
+      {createPortal(<EmailModal
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
-      />
+      />, document.body)}
 
       <div className="reveal" ref={deckDivRef}>
         <div className="slides">

@@ -3,7 +3,7 @@ import React from 'react';
 export default function EmailModal({ isOpen, onClose }) {
     if (!isOpen) return null;
     return (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center" onClick={onClose}>
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" onClick={onClose}>
             <div className="email-modal">
                     <div className="email-modal-form w-lg bg-black rounded-xl">
                         <div className="email-modal-input">
@@ -24,7 +24,7 @@ export default function EmailModal({ isOpen, onClose }) {
                         </div>
                         <div className="email-modal-button">
                             <button onClick={onClose}>닫기</button>
-                            <button onClick={() => {/* send logic */ }}>SUBMIT</button>
+                            <button onClick={() => alert("아직은 지원하지 않습니다.")}>SUBMIT</button>
                         </div>
                     </div>
             </div>
