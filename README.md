@@ -1,7 +1,6 @@
 # Profile
 - 프로필 페이지입니다.
 
-## 기술
 ### v1
 - 순수 html, css, javascript를 사용
 
