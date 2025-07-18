@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Slide = ({ children }) => {
+const Slide = ({ children, dataTransition  }) => {
 
     return (
-        <section>
+        <section data-transition={dataTransition}>
             {children}
         </section>
     )

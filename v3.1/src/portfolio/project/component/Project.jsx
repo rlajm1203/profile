@@ -2,9 +2,9 @@
 import React from 'react';
 import Slide from '@/reveal/component/Slide';
 
-export default function Project({ project }) {
+export default function Project({ project, dataTransition }) {
   return (
-    <Slide id="projects" className="semi-container projects">
+    <Slide id="projects" className="semi-container projects" dataTransition={dataTransition}>
         <h2 className="title bebas-neue mb-6">projects</h2>
         <div className="!flex !flex-col !gap-8">
           {
