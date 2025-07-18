@@ -438,18 +438,3 @@ img {
 #modal-close {
     background: white;
 }
-
-/* reveal */
-.reveal .slides > section {
-  text-align: left !important;
-  pointer-events: auto !important;
-}
-
-.reveal .slides > section.present > * {
-    position: relative;
-    z-index: 10;
-}
-
-.reveal p {
-    margin : 0 !important;
-}

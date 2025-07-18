@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react'
 import Reveal from "reveal.js";
+import "@/reveal/reveal.css"
 
 const Slides = ({ children }) => {
 
