@@ -1,5 +1,5 @@
 import React from 'react';
-import { useModal } from '../ui/Modal';
+import { useModal } from '@/ui/Modal';
 
 export default function HeroSection() {
 

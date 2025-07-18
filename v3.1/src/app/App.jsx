@@ -1,19 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 
 import './App.css'
-import ProfileHeader from '@/components/ProfileHeader'
-import HeroSection from '@/components/HeroSection'
-import Project from '@/components/Project'
-import AboutSection from '@/components/AboutSection'
-import EmailModal from '@/components/EmailModal'
-import Projects from "@/components/Projects";
+import ProfileHeader from '@/header/component/ProfileHeader'
+import HeroSection from '@/hero/component/HeroSection'
+import AboutSection from '@/about/component/AboutSection'
+import EmailModal from '@/email/component/EmailModal'
+import Projects from "@/project/component/Projects";
 
 
 import Reveal from "reveal.js";
 
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
-import { Modal } from "../ui/Modal";
+import { Modal } from "@/ui/Modal";
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);

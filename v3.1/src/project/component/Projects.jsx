@@ -1,6 +1,6 @@
 import React from 'react'
-import Project from '@/components/Project'
-import {PROJECTS} from '@/constants/projects.js'
+import Project from '@/project/component/Project'
+import {PROJECTS} from '@/project/constants/projects.js'
 
 const Projects = () => {
     return PROJECTS.map((project) => {
