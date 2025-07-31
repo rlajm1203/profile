@@ -14,12 +14,17 @@ const Projects = ({ dataTransition }) => {
           <Slide id="projects" className="semi-container projects" dataTransition={dataTransition}>
             <Project project={project} dataTransition={dataTransition} />
           </Slide>
-          <Slide>
-            <ProjectDetail project={project} />
-          </Slide>
-          <Slide>
-            <ProjectDetail project={project} />
-          </Slide>
+
+          {
+            project.detailDescription.map((description, idx) => {
+              return (
+                <Slide>
+                  <ProjectDetail project={project} idx={idx} />
+                </Slide>
+              )
+            })
+          }
+
         </Slide>
       </>
     )

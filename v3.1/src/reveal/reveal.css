@@ -1,4 +1,7 @@
 /* reveal */
+.reveal-viewport {
+    background-color: rgb(15, 15, 15) !important;
+}
 .reveal .slides section {
     text-align: left !important;
     pointer-events: auto !important;
