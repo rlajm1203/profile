@@ -15,6 +15,7 @@ import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 import { Modal } from "@/ui/Modal";
+import { ProjectProvider } from "../contexts/ProjectProvider";
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
             <HeroSection />
           </Slide>
 
-          <Projects />
+          <ProjectProvider>
+            <Projects />
+          </ProjectProvider>
 
           <Slide>
             <AboutSection />
