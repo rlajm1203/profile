@@ -1,5 +1,6 @@
 // src/constants/projects.js
 
+// TODO: Project detail description 채우기
 export const PROJECTS = [
   {
     id: 1,
