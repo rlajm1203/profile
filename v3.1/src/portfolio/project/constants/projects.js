@@ -23,23 +23,23 @@ export const PROJECTS = [
       {
         title: `mDNS, ARP 프로토콜을 활용한 동아리방 재실 현황 알고리즘 설계 및 구현`,
         description:`
-        문제 1 : Wifi 기반 재실 탐지를 위해, 사용자와 기기 정보 매핑이 필요한 문제.
+#### 문제 1 : Wifi 기반 재실 탐지를 위해, 사용자와 기기 정보 매핑이 필요한 문제.
 
-        해결 1
-        1. WireShark의 CLI 버전인 Tshark 프로세스를, ProcessBuilder를 사용하여 자식 프로세스로 생성
-        2. tShark 프로세스는 ARP, mDNS 프로토콜 패킷의 IP,MAC 주소를 추출하여 출력 스트림으로 전달
-        2. 애플리케이션에서 Non Blocking BufferedReader 와 연결하여, tShark 프로세스의 출력 스트림을 통해 데이터를 수집
-        3. 데이터가 일정량 이상 쌓일 경우, 데이터베이스에 저장
-        4. 이후 사용자가 자신의 IP와 함께 기기등록 요청을 보내면, 수집된 MAC 주소를 조회하여, MAC 주소와 MemberID 매핑
+#### 해결 과정
+1.WireShark의 CLI 버전인 Tshark 프로세스를, ProcessBuilder를 사용하여 자식 프로세스로 생성
+2.tShark 프로세스는 ARP, mDNS 프로토콜 패킷의 IP,MAC 주소를 추출하여 출력 스트림으로 전달
+2.애플리케이션에서 Non Blocking BufferedReader 와 연결하여, tShark 프로세스의 출력 스트림을 통해 데이터를 수집
+3.데이터가 일정량 이상 쌓일 경우, 데이터베이스에 저장
+4.이후 사용자가 자신의 IP와 함께 기기등록 요청을 보내면, 수집된 MAC 주소를 조회하여, MAC 주소와 MemberID 매핑
         
 
-        문제 2 : 기기 등록이 완료된 사용자에 대해서, 실시간으로 재실 확인 수단이 필요한 문제.
+#### 문제 2 : 기기 등록이 완료된 사용자에 대해서, 실시간으로 재실 확인 수단이 필요한 문제.
 
-        해결 2
-        1. 네트워크 랜카드의 Monitor 모드 적용
-        2. ProcessBuilder를 사용하여, tShark가 Monitor 모드의 네트워크 랜카드로, 목적지 주소에 상관 없이 공기 중에 떠다니는 Wifi 패킷 수집하도록 설정
-        3. 수집된 Monitor 모드 패킷을 불러온 후, 현재 사용자의 기기와 일치하는 MAC 주소가 존재한다면 해당 사용자를 재실 처리
-        4. 수집된 Monitor 모드 패킷을 불러온 후, 사용자의 MAC 주소가 존재하지 않는다면 해당 MAC 주소가 10분 이상 접속을 하지 않았을 경우 퇴실 처리`,
+#### 해결 과정
+1.네트워크 랜카드의 Monitor 모드 적용
+2.ProcessBuilder를 사용하여, tShark가 Monitor 모드의 네트워크 랜카드로,목적지 주소에 상관 없이 공기 중에 떠다니는 Wifi 패킷 수집하도록 설정
+3.수집된 Monitor 모드 패킷을 불러온 후, 현재 사용자의 기기와 일치하는 MAC 주소가 존재한다면 해당 사용자를 재실 처리
+4.수집된 Monitor 모드 패킷을 불러온 후, 사용자의 MAC 주소가 존재하지 않는다면 해당 MAC 주소가 10분 이상 접속을 하지 않았을 경우 퇴실 처리`,
         imageSrc : "/static/project/whozin-device-register.png"
       },
       {

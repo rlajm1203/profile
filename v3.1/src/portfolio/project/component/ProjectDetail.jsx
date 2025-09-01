@@ -13,11 +13,11 @@ const ProjectDetail = ({ project, idx }) => {
   return (
     <div className='container !flex !flex-col justify-between gap-[3dvw]'>
       <ProjectHeader project={project} />
-      <div className='flex flex-row gap-[3dvw]'>
+      <div className='flex flex-row justify-between'>
         <div className='flex flex-col gap-[1dvw]'>
           <div className="project-name !text-[1.5dvw] !font-light">{updatedProject.title}</div>
           <div className='!text-[1dvw] !font-light !font-[Manrope] whitespace-pre-line'>
-            {detail[idx].description}
+            <ReactMarkDown>{detail[idx].description}</ReactMarkDown>
           </div>
         </div>
         <div>
