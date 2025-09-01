@@ -37,7 +37,7 @@ img {
 }
 
 .container {
-    max-width: 70dvw;
+    max-width: 90dvw;
     margin: 5dvw auto;
 }
 
@@ -244,7 +244,8 @@ img {
 .project-body {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10dvw;
 }
 
 .project-img {
