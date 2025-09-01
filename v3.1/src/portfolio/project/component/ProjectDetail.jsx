@@ -13,7 +13,7 @@ const ProjectDetail = ({ project, idx }) => {
   return (
     <div className='container !flex !flex-col justify-between gap-[3dvw]'>
       <ProjectHeader project={project} />
-      <div className='flex flex-row gap-[1dvw]'>
+      <div className='flex flex-row gap-[3dvw]'>
         <div className='flex flex-col gap-[1dvw]'>
           <div className="project-name !text-[1.5dvw] !font-light">{updatedProject.title}</div>
           <div className='!text-[1dvw] !font-light !font-[Manrope] whitespace-pre-line'>
@@ -22,7 +22,7 @@ const ProjectDetail = ({ project, idx }) => {
         </div>
         <div>
           {detail[idx].imageSrc ?
-            <img className='w-[50dvw]' src={`${import.meta.env.BASE_URL}${detail[idx].imageSrc}`}></img>
+            <img className='w-[40dvw] rounded-xl' src={`${import.meta.env.BASE_URL}${detail[idx].imageSrc}`}></img>
             : ""}
         </div>
       </div>
