@@ -3,7 +3,7 @@
 // TODO: Project detail description 채우기
 export const PROJECTS = [
   {
-    id: 1,
+    id: 3,
     title: "EEOS",
     semiTitle: "동아리 행사 관리 시스템",
     detail: `Econovation Event Operating System 의 약자로
@@ -70,7 +70,7 @@ export const PROJECTS = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "ABAS",
     semiTitle: "농업 빅데이터 분석 웹 사이트",
     detail: `농업에 대한 빅데이터의
@@ -95,7 +95,7 @@ export const PROJECTS = [
     ]
   },
   {
-    id: 4,
+    id: 1,
     title: "Whoz-In",
     semiTitle: "wi-fi 기반 동아리방 재실 확인 시스템",
     detail: `Wi-Fi 기술을 기반으로 하는

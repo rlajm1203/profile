@@ -6,8 +6,11 @@ import ProjectDetail from './ProjectDetail';
 import Slide from '@/reveal/component/Slide'
 
 const Projects = ({ dataTransition }) => {
+  // project.id 로 정렬
   const { projects } = useProjects();
-  return projects.map((project) => {
+  const sortedProjects = Array.from(projects.sort((a,b)=>a.id-b.id));
+
+  return sortedProjects.map((project) => {
     return (
       <>
         <Slide>
